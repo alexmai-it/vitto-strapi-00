@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notizie",
+  "info": {
+    "singularName": "notizia",
+    "pluralName": "notizie",
+    "displayName": "Notizie",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titolo": {
+      "type": "string"
+    },
+    "Data": {
+      "type": "datetime"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Titolo"
+    },
+    "Immagine": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Contenuto": {
+      "type": "richtext"
+    },
+    "Seo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.seo"
+    }
+  }
+}
